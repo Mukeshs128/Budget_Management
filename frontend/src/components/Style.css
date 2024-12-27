@@ -1,0 +1,83 @@
+/* Background styling for the page */
+.auth-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    background: url(https://img.freepik.com/premium-photo/wooden-blocks-with-word-budget-stack-coins-concept-about-budget-planning-allocation_42299-2163.jpg?w=2000) no-repeat;
+    background-position-y: 70%;
+    background-size: cover;   
+}
+
+/* Form container */
+.auth-form-container {
+    background-color: rgba(12, 12, 12, 0.65);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Input styling */
+.auth-form-container .form-control {
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    padding: 12px;
+    font-size: 1rem;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.auth-form-container .form-control:focus {
+    border-color: #2575fc;
+    box-shadow: 0 0 8px rgba(37, 117, 252, 0.5);
+    outline: none;
+}
+
+/* Button styling */
+.auth-form-container .btn-primary {
+    background: linear-gradient(90deg, #8e5b75a4, #2575fc);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    width: 100%;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.auth-form-container .btn-primary:hover {
+    background: linear-gradient(90deg, #2575fc, #8e5b7550);
+    transform: translateY(-2px);
+}
+
+/* Link styling */
+.auth-form-container a {
+    color: #fb932a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.auth-form-container a:hover {
+    text-decoration: underline;
+}
+
+/* Form label styling */
+.auth-form-container label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: block;
+    color: #fff;
+}
+
+/* Extra text styles */
+.auth-form-container .form-basic-checkbox {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.log {
+    text-align: center;
+    color: #fff;
+}
