@@ -74,7 +74,7 @@ function MixedChart() {
             y: {
                 title: {
                     display: true,
-                    text: "Amount ($)",
+                    text: "Amount (₹)",
                 },
                 beginAtZero: true,
             },

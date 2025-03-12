@@ -16,6 +16,8 @@ function Login() {
                 { username, password }
             );
             localStorage.setItem("token", response.data.token);
+            localStorage.setItem("username", username); // Save username
+            
             alert("Login successful");
             window.location.href = "/dashboard"; // Redirect to dashboard
         } catch (error) {

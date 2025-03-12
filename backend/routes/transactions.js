@@ -5,7 +5,7 @@ const router = require('express').Router();
 
 // Define each route individually with '/api' prefix
 router.post('/add-income', addIncome);
-router.get('/get-incomes', getIncomes); // Ensure this matches the frontend request
+router.get('/get-incomes', getIncomes); 
 router.delete('/delete-income/:id', deleteIncomes);
 
 router.post('/add-expense', addExpense);

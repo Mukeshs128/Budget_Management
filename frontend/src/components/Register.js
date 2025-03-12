@@ -15,6 +15,7 @@ function Register() {
         try {
             const response = await axios.post('http://localhost:5000/api/auth/register', { name, email, username, password });
             alert(response.data.message);
+            window.location.href = "/login"; // Redirect to dashboard
             // Redirect to login page or dashboard
         } catch (error) {
             alert(error.response.data.message);

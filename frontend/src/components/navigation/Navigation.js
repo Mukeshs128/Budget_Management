@@ -7,18 +7,25 @@ import { useGlobalContext } from "../../context/globalContext";
 
 function Navigation({ active, setActive }) {
   const { netWorth } = useGlobalContext();
+  const [show, setShow] = useState(false);
+  const [username, setUsername] = useState("");
 
   useEffect(() => {
     netWorth(); // Invoke netWorth during the component's lifecycle
+
+    const storedUsername = localStorage.getItem("username");
+    if (storedUsername) {
+      setUsername(storedUsername);
+    }
   }, [netWorth]);
 
-  const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
   const handleSignOut = () => {
     localStorage.removeItem("token"); // Clear the token
+    localStorage.removeItem("username"); // Clear the username
     window.location.href = "/login"; // Redirect to login page
   };
 
@@ -30,7 +37,7 @@ function Navigation({ active, setActive }) {
           <div className="user-con">
             <img className="logo" src="/images/avatar.webp" alt="avatar" />
             <div className="text">
-              <h2>Mukesh</h2>
+              <h2>{username || "Guest"}</h2> {/* Display username or "Guest" */}
               <p>
                 {rupee} {netWorth()}
               </p>
@@ -68,7 +75,7 @@ function Navigation({ active, setActive }) {
               <div className="user-con">
                 <img className="logo" src="/images/avatar.webp" alt="avatar" />
                 <div className="text">
-                  <h2>Mukesh</h2>
+                  <h2>{username || "Guest"}</h2> {/* Display username or "Guest" */}
                   <p>
                     {rupee} {netWorth()}
                   </p>
